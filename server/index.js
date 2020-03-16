@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 require('dotenv').config();
-var Pusher = require('pusher');
+const Pusher = require('pusher');
 
-var pusher = new Pusher({
+const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID,
   key: process.env.PUSHER_APP_KEY,
   secret: process.env.PUSHER_APP_SECRET,
@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/pusher/auth', (req, res) => {
-  var socketId = req.body.socket_id;
-  var channel = req.body.channel_name;
-  var auth = pusher.authenticate(socketId, channel);
+  const socketId = req.body.socket_id;
+  const channel = req.body.channel_name;
+  const auth = pusher.authenticate(socketId, channel);
   res.send(auth);
 });
 
