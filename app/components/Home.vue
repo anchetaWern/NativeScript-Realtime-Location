@@ -10,10 +10,10 @@
                 @mapReady="onMapReady">
             </MapView>
             <Button text="Stop Sharing Location" @tap="stopSharingLocation" v-if="isSharingLocation"></Button>
-            <Button text="Share Location" @tap="startSharingLocation" v-if="!isSharingLocation"></Button>
+            <Button text="Share Location" @tap="startSharingLocation" v-else="isSharingLocation"></Button>
             
             <Button text="Stop Tracking Location" @tap="stopTrackingLocation" v-if="isTrackingLocation"></Button>
-            <Button text="Track Location" @tap="startTrackingLocation" v-if="!isTrackingLocation"></Button>
+            <Button text="Track Location" @tap="startTrackingLocation" v-else="isTrackingLocation"></Button>
         </StackLayout>
     </Page>
 </template>
