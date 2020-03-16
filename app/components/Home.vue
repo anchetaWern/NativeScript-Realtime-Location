@@ -27,7 +27,7 @@ import { Accuracy } from "tns-core-modules/ui/enums";
 
 import Pusher from "pusher-nativescript";
 
-var randomString = require('random-string');
+const randomString = require('random-string');
 
 const PUSHER_APP_KEY = 'YOUR PUSHER APP KEY';
 const PUSHER_APP_CLUSTER = 'YOUR PUSHER APP CLUSTER';
